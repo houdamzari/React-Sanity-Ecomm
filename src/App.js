@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect } from "react";
 import { client } from './client'
-import Homepage from "./components/Homepage/Homepage";
+import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   const fetchdata = async () => {
@@ -18,14 +18,12 @@ function App() {
 
   },[])
   return (
-    <>
       <Routes>
-      <Route element={<Homepage />} path="/">
-            <Route path="/" element={<Homepage />} />
+      <Route path="/" element={<Layout />}>
+            <Route index element={<Homepage />} />
             <Route path="/sneakers" element={<ProductsPage />} />
       </Route>
       </Routes>
-    </>
   );
 }
 

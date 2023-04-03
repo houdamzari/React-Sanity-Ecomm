@@ -1,10 +1,10 @@
 import React from 'react';
+import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 
 function Homepage(props) {
   return (
-     <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+     
+    <HeaderTitle />
   );
 }
 
