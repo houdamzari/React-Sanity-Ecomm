@@ -5,6 +5,7 @@ import Homepage from "./pages/Homepage";
 import { Routes, Route } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import Layout from "./components/Layout/Layout";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   const fetchdata = async () => {
@@ -21,7 +22,8 @@ function App() {
       <Routes>
       <Route path="/" element={<Layout />}>
             <Route index element={<Homepage />} />
-            <Route path="/sneakers" element={<ProductsPage />} />
+            <Route path="/products" element={<ProductsPage />} />
+            <Route path="/about" element={<AboutPage />} />
       </Route>
       </Routes>
   );
