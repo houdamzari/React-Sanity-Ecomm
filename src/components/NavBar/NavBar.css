@@ -1,0 +1,10 @@
+
+a  , li  {
+  width: fit-content;
+  height: fit-content;
+}
+
+.active {
+  color: rgb(0, 60, 255);
+  font-weight: bold;
+}
